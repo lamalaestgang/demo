@@ -33,9 +33,31 @@ public class HelloApplication extends Application {
         gc.fillRect(180, 350, 20, 50);   // Jambe gauche
         gc.fillRect(350, 350, 20, 50);   // Jambe droite
 
+        // Dessiner un enfant 1
+        gc.setFill(Color.BEIGE);
+        gc.fillOval(100, 350, 30, 30); // Tête
+        gc.setFill(Color.BLUE);
+        gc.fillRect(110, 380, 10, 30); // Corps
+        gc.setFill(Color.BLACK);
+        gc.strokeLine(110, 410, 100, 430); // Jambe gauche
+        gc.strokeLine(120, 410, 130, 430); // Jambe droite
+        gc.strokeLine(110, 390, 90, 400);  // Bras gauche
+        gc.strokeLine(120, 390, 140, 400); // Bras droit
+
+        // Dessiner un enfant 2
+        gc.setFill(Color.BEIGE);
+        gc.fillOval(150, 350, 30, 30); // Tête
+        gc.setFill(Color.RED);
+        gc.fillRect(160, 380, 10, 30); // Corps
+        gc.setFill(Color.BLACK);
+        gc.strokeLine(160, 410, 150, 430); // Jambe gauche
+        gc.strokeLine(170, 410, 180, 430); // Jambe droite
+        gc.strokeLine(160, 390, 140, 400); // Bras gauche
+        gc.strokeLine(170, 390, 190, 400); // Bras droit
+
         // Configurer la scène
         Scene scene = new Scene(new javafx.scene.layout.StackPane(canvas));
-        stage.setTitle("Paysage généré par une IA avec un dromadaire !");
+        stage.setTitle("Paysage avec un dromadaire et des enfants !");
         stage.setScene(scene);
         stage.show();
     }
